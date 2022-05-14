@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "backtracecrashreporter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/09samit/BacktraceCrashReporter",
+      "state" : {
+        "revision" : "efa5bf109d72009bacfd870a45339bdc6adb4d61",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

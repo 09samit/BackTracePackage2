@@ -11,9 +11,14 @@ let package = Package(
             name: "BackTracePackage2",
             targets: ["BackTracePackage2"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/09samit/BacktraceCrashReporter", from: "1.0.0"),
+    ],
     targets: [
         .target(
             name: "BackTracePackage2",
-            dependencies: []),
+            linkerSettings: [.linkedFramework("Backtrace_PLCrashReporter")],
+
+        )
     ]
 )
