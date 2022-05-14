@@ -12,7 +12,7 @@ let package = Package(
             targets: ["BackTracePackage2"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/09samit/BacktraceCrashReporter", from: "1.0.0"),
+        .package(url: "https://github.com/09samit/BacktraceCrashReporter", from: "1.0.1"),
     ],
     targets: [
         .target(
