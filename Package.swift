@@ -17,8 +17,7 @@ let package = Package(
     targets: [
         .target(
             name: "BackTracePackage2",
-            linkerSettings: [.linkedFramework("Backtrace_PLCrashReporter")],
-
+            linkerSettings: [.linkedFramework("Backtrace_PLCrashReporter")]
         )
     ]
 )
