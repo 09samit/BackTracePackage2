@@ -24,10 +24,10 @@ protocol Payload: Encodable {
 extension Payload {
 
     static func getApplicationName() -> String {
-        return Backtrace.applicationName ?? ""
+        return Bundle.main.displayName ?? ""
     }
 
     static func getApplicationVersion() -> String {
-        return Backtrace.applicationVersion ?? ""
+        return Bundle.main.releaseVersionNumber ?? ""
     }
 }
