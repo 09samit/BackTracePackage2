@@ -4,22 +4,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "BackTracePackage2",
+    name: "BackTracePackageMain",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "BackTracePackage2",
-            targets: ["BackTracePackage2"]),
+            name: "BackTracePackageMain",
+            targets: ["BackTracePackageMain"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/09samit/BacktraceCrashReporter", from: "1.0.1"),
+        .package(url: "https://github.com/09samit/plcrashreporter-master.git", from: "1.0.0"),
     ],
     targets: [
         .target(
-            name: "BackTracePackage2",
+            name: "BackTracePackageMain",
             dependencies: [
-                "BacktraceCrashReporter"
-            ]
+                .product(name: "CrashReporter", package: "plcrashreporter-master")
+            ],
+            path: "Sources"
         )
     ]
 )
